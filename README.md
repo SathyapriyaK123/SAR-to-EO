@@ -150,8 +150,8 @@ The weights of our trained models can be downloaded using the links below:
 
 | Model Config | LPIPS ↓ | FID ↓ | SSIM ↑ | PSNR ↑ (dB) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Ablation Baseline ($L_1$ only)** | *[TBD]* | *[TBD]* | *[TBD]* | *[TBD]* |
-| **Full Pix2Pix ($L_1$ + GAN)** | *[TBD]* | *[TBD]* | *[TBD]* | *[TBD]* |
+| **Ablation Baseline ($L_1$ only)** | 0.76737 | 375.0559 | 0.31989 | 13.7808 |
+| **Full Pix2Pix ($L_1$ + GAN)** | 0.67672 | 339.2502 | 0.13924 | 12.8365 |
 
 ### Qualitative Samples
 Qualitative comparison grids (SAR Input $\rightarrow$ Generated Optical $\rightarrow$ Ground-Truth Optical) are saved in the `outputs/samples/` and `outputs/qualitative_triplets/` directories.

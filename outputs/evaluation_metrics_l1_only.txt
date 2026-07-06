@@ -1,0 +1,11 @@
+=== SAR-to-EO Translation Evaluation Results ===
+Weights Evaluated: outputs/l1_only_best.pth
+Number of test patches: 1370
+
+Primary Perceptual Metrics:
+  LPIPS: 0.76737
+  FID:   375.0559
+
+Secondary Pixel-level Metrics:
+  SSIM:  0.31989
+  PSNR:  13.7808 dB
