@@ -51,7 +51,7 @@ Since satellite datasets are extremely large, we recommend training on **Kaggle*
 4. In the first cell of your notebook, run:
 ```bash
 # Clone the repository
-!git clone https://github.com/<your-username>/<your-repo-name>.git project
+!git clone https://github.com/SathyapriyaK123/SAR-to-EO.git project
 %cd project
 
 # Install packages
@@ -139,8 +139,8 @@ python infer.py --input_dir <path_to_sar_pngs> --output_dir <path_to_save_result
 ## Model Weights
 
 The weights of our trained models can be downloaded using the links below:
-*   **Full Pix2Pix Model Checkpoint**: `[Insert public link here - e.g. Hugging Face/Google Drive]`
-*   **Ablation Baseline ($L_1$ only) Checkpoint**: `[Insert public link here - e.g. Hugging Face/Google Drive]`
+*   **Full Pix2Pix Model Checkpoint**: [Google Drive Link](https://drive.google.com/file/d/1uSvHC3-wpySS2NjIInCx0ex1_sv2rTVo/view?usp=drive_link)
+*   **Ablation Baseline ($L_1$ only) Checkpoint**: [Google Drive Link](https://drive.google.com/file/d/1CGKuuQXK5phbaMM3hVvq31bIZKRR2CKH/view?usp=sharing)
 
 ---
 
