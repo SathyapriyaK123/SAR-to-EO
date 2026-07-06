@@ -1,0 +1,9 @@
+numpy>=1.21.0
+matplotlib>=3.4.0
+opencv-python>=4.5.0
+pyyaml>=5.4.1
+lpips>=0.1.4
+pytorch-fid>=0.3.0
+pillow>=8.0.0
+tqdm>=4.60.0
+scikit-image>=0.18.0

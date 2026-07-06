@@ -1,0 +1,46 @@
+# Configuration for SAR-to-EO Image Translation
+
+dataset:
+  # The Kaggle dataset location when mounted
+  root_dir: "/kaggle/input/sentinel12-image-pairs-segregated-by-terrain"
+  
+  # Image specifications
+  image_size: 256
+  batch_size: 16
+  num_workers: 2
+  
+  # Reproducibility seed
+  seed: 42
+  
+  # Fraction of unique ROIs to allocate to train (remaining goes to val/test)
+  train_split_ratio: 0.8
+
+model:
+  generator:
+    input_channels: 1    # Single-channel Sentinel-1 (VV)
+    output_channels: 3   # 3-channel Sentinel-2 (RGB)
+    init_features: 64    # Initial filter size for U-Net
+  discriminator:
+    # Conditional discriminator takes concat(input_SAR, target_EO)
+    # 1 channel (SAR) + 3 channels (EO) = 4 channels
+    input_channels: 4    
+    init_features: 64
+
+training:
+  epochs: 15
+  lr_g: 0.0002
+  lr_d: 0.0002
+  beta1: 0.5
+  beta2: 0.999
+  
+  # Loss weights
+  lambda_l1: 100.0       # Weight for L1 loss in Pix2Pix
+  
+  # Directory to save logs, checkpoints, and generated samples
+  save_dir: "outputs"
+  
+  # Logging intervals
+  log_interval: 50       # Print progress every N batches
+  val_interval: 1        # Evaluate on validation split every N epochs
+
+ablation_mode: "pix2pix"  # Set to "pix2pix" (full GAN) or "l1_only" (baseline generator with L1 loss only)
