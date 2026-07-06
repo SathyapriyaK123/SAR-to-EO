@@ -93,8 +93,9 @@ def get_data_loaders(root_dir, image_size=256, batch_size=16, train_split_ratio=
         
         for s1_path in s1_files:
             filename = os.path.basename(s1_path)
-            # Find the corresponding S2 file with the exact same filename
-            s2_path = os.path.join(s2_dir, filename)
+            # Find the corresponding S2 file by replacing '_s1_' with '_s2_' in the filename
+            s2_filename = filename.replace('_s1_', '_s2_')
+            s2_path = os.path.join(s2_dir, s2_filename)
             
             if os.path.exists(s2_path):
                 all_pairs.append({
